@@ -7,12 +7,12 @@ namespace ShiftBasedMultiplication
     class Multiplicator
     {
 
-        public static ulong MultiplyUnsigned(ulong operandA, ulong operandB)
+        public static uint MultiplyUnsigned(uint operandA, uint operandB)
         {
-            ulong result = 0x00;
+            uint result = 0x00;
             do
             {
-                ulong mask = ((operandB) & 0x1) == 0x1 ? 0xffffffffffffffff : 0x0;
+                uint mask = ((operandB) & 0x1) == 0x1 ? 0xffffffff : 0x0;
                 result += operandA & mask;
                 operandA <<= 1;
                 operandB >>= 1;

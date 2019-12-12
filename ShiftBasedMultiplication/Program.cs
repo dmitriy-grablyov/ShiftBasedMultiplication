@@ -10,11 +10,11 @@ namespace ShiftBasedMultiplication
             {
                 Console.Write("enter operand A: ");
                 string inputA = Console.ReadLine();
-                ulong operandA = UInt64.Parse(inputA);
+                uint operandA = UInt32.Parse(inputA);
                 Console.Write("enter operand B: ");
                 string inputB = Console.ReadLine();
-                ulong operandB = UInt64.Parse(inputB);
-                ulong result = Multiplicator.MultiplyUnsigned(operandA, operandB);
+                uint operandB = UInt32.Parse(inputB);
+                uint result = Multiplicator.MultiplyUnsigned(operandA, operandB);
                 Console.WriteLine("multiplication result is {0}, and should be {1}", result, operandA * operandB);
             }
         }
