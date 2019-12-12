@@ -6,6 +6,7 @@ namespace ShiftBasedMultiplication
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("To exit, press ^C");
             try
             {
                 Console.SetWindowSize(160, Console.WindowHeight);
