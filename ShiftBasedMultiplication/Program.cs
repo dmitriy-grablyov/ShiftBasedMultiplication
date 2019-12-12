@@ -8,7 +8,7 @@ namespace ShiftBasedMultiplication
         {
             try
             {
-                Console.SetWindowSize(140, Console.WindowWidth);
+                Console.SetWindowSize(160, Console.WindowHeight);
             } catch (Exception ex)
             {
                 Console.WriteLine("could not change size of the window, table might be displayed incorrectly");
