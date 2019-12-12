@@ -14,9 +14,10 @@ namespace ShiftBasedMultiplication
             {
                 Console.WriteLine("could not change size of the window, table might be displayed incorrectly");
             }
+            Multiplicator multiplicator = new Multiplicator();
             while (true)
             {
-                Multiplicator multiplicator = new Multiplicator();
+                Console.WriteLine();
                 Console.Write("enter operand A: ");
                 string inputA = Console.ReadLine();
                 uint operandA = UInt32.Parse(inputA);
