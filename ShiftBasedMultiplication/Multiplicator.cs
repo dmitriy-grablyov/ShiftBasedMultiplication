@@ -6,14 +6,17 @@ namespace ShiftBasedMultiplication
 {
     class Multiplicator
     {
+
         public static ulong MultiplyUnsigned(ulong operandA, ulong operandB)
         {
             ulong result = 0x00;
-            for (sbyte i = 0; i < 64; i++)
+            do
             {
-                ulong mask = ((operandB >> i) & 0x1) == 0x1 ? 0xffffffffffffffff : 0x0;
-                result += (operandA << i) & mask;
-            }
+                ulong mask = ((operandB) & 0x1) == 0x1 ? 0xffffffffffffffff : 0x0;
+                result += operandA & mask;
+                operandA <<= 1;
+                operandB >>= 1;
+            } while (operandB > 0);
             return result;
         }
     }
